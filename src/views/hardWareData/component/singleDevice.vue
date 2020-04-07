@@ -14,7 +14,7 @@
                 :fill="this.fill"
                 empty-fill="#004970"
                 :animation-start-value="0.0"
-                :start-angle="-90"
+                :start-angle="30"
                 insert-mode="append"
                 :thickness="12"
                 :show-percent="true"
@@ -36,7 +36,7 @@
         @Prop({ default: "" }) name: String;
         @Prop({ default: "" }) status: String;
         @Prop({ default: "" }) id: number;
-        private fill:object  = { gradient: ["#F0FF00", "#00D2FF"] }
+        private fill:object  = { gradient: [ "#00D2FF","#F0FF00",] }
         mounted(){
         }
 

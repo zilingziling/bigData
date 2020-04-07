@@ -115,7 +115,9 @@ export default class WarningNum extends Vue {
           },
       },
       yAxis: {
-
+        "axisTick":{       //y轴刻度线
+          "show":false
+        },
           axisLine: {
               show: false,//不显示坐标轴线
           },
@@ -134,6 +136,7 @@ export default class WarningNum extends Vue {
           type: "bar",
           barWidth: barWidth,
           data: [220, 182, 191, 234, 290, 330, 310],
+
           itemStyle: {
             normal: {
               color: colors[1]
@@ -148,12 +151,14 @@ export default class WarningNum extends Vue {
           symbol: "diamond",
           symbolOffset: [0, "50%"],
           symbolSize: [barWidth, 10],
+
           itemStyle: {
             normal: {
               color: colors[1]
             }
           }
         },
+
         {
           z: 3,
           name: "上部1",
@@ -163,6 +168,16 @@ export default class WarningNum extends Vue {
           symbol: "diamond",
           symbolOffset: [0, "-50%"],
           symbolSize: [barWidth - 4, (10 * (barWidth - 4)) / barWidth],
+          label: {
+            show: true, // 开启显示
+            position: 'top', // 在上方显示
+            distance: 16, // 距离图形元素的距离。当 position 为字符描述值（如 'top'、'insideRight'）时候有效。
+            verticalAlign: 'middle',
+            textStyle: { // 数值样式
+              color: '#87F0FC',
+              fontSize: 12
+            }
+          },
           itemStyle: {
             normal: {
               borderColor: "rgba(0,85,89,.2)",
